@@ -1,1 +1,0 @@
-import {fruits, users, makeTwoDimArray} from '../variables'
