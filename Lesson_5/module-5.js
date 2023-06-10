@@ -142,7 +142,7 @@ function toCamelCase(str) {
     const word = splittedStr[i];
     const firstLetter = word[0];
 
-    result.push(
+    result.push(b 
       (i === 0 ? firstLetter : firstLetter.toUpperCase()) +
         word.slice(1).toLowerCase()
     );
@@ -159,3 +159,25 @@ console.log(toCamelCase("The_Stealth_Warrior"));
 
 console.log(toCamelCase("The_Stealth-Warrior"));
 // "TheStealthWarrior"
+
+
+
+/**
+ * !truly
+ * []
+ * {}
+ * Numbers except 0
+ * "".length > 0
+ * true
+ * Infinity
+ * 
+ * ?! falsy
+ * null
+ * undefined
+ * 0
+ * false
+ * ""
+ * NaN
+ */
+
+
