@@ -84,7 +84,6 @@ console.log(getProps(product, "price", "name")); // [300, 'Phone']
 console.log(getProps(product, "properties", "Total storage", "test")); // [[], '512Mb', 'Not Found']
 console.log(getProps(product, "cameraMp", "model")); //[1.3, undefined]
 console.log(getProps(product)); // []
-
 // const andOrOr = null || 0 && [];
 // const andOrOr = !["apple"] && 0 && undefined && {
 //   age: 3
@@ -105,6 +104,36 @@ console.log(getProps(product)); // []
 // console.log(andOrOr);
 
 // console.log('    '.split("").join(" ").trim())
-console.log(andOrOr2);
+// console.log(andOrOr2);
 
 
+
+const arr = ["one", "two", "three"];
+
+for (const number of arr) {
+  //....
+  
+  for(const letter of number) {
+    console.log(letter)
+  }
+
+  if (number % 2 === 0) {
+    console.log("Even")
+  }
+
+  console.log(number);
+}
+
+for (let i = 0; i< arr.length; i += 1) {
+
+  for (let j = 0; j < arr[i].length; j += 1) {
+
+    console.log(arr[i][j])
+  }
+  if (arr[i] % 2 === 0) {
+    console.log("Even")
+  }
+
+  //....
+  console.log(arr[i])
+}

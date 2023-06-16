@@ -41,7 +41,7 @@ function helpMe() {
  *
  * Якщо age не age - виводимо "Please enter valid age"
  */
-function canIDrink(age) {
+function generateResponse(age) {
   age = Number(age);
 
   // let res = "";
@@ -67,14 +67,14 @@ function canIDrink(age) {
   return "Take care about your health";
 }
 
-console.log(canIDrink());
-console.log(canIDrink(0));
-console.log(canIDrink(5));
-console.log(canIDrink(18));
-console.log(canIDrink(27));
-console.log(canIDrink(57));
-console.log(canIDrink(62));
-console.log(canIDrink("Nine"));
+console.log(generateResponse());
+console.log(generateResponse(0));
+console.log(generateResponse(5));
+console.log(generateResponse(18));
+console.log(generateResponse(27));
+console.log(generateResponse(57));
+console.log(generateResponse(62));
+console.log(generateResponse("Nine"));
 
 // 10000 lines of code
 
