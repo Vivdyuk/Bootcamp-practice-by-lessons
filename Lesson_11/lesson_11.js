@@ -97,10 +97,58 @@ function whatsThis() {
   }
   
   console.log(this);
-    console.log(obj.getThis.call('text')/* .apply('pretext') */);
+    console.log(obj.getThis.call('text').apply('pretext'));
     console.log(obj.getAnotherThis());
     console.log(giveMeThis().bind('wtf'));
 }
 
 
 whatsThis.bind('bind');
+
+const bobBob = {
+  age: 26,
+  name: 'Bob',
+  hasChildren : true
+}
+
+
+const johnJohn = Object.create(bobBob);
+
+// const johnJohn = {...bobBob};
+console.log(johnJohn);
+
+johnJohn.name = 'John';
+
+console.log(johnJohn);
+console.log(johnJohn.name);
+
+const mary = Object.create(null);
+
+mary.name = "Mary";
+
+console.log(mary);
+
+const books = [
+  {
+    title: "The Last Kingdom",
+    author: "Bernard Cornwell",
+    genres: "adventure" ,
+  },
+  {
+    title: "Beside Still Waters",
+    author: "Robert Sheckley",
+    genres:  "mysticism",
+  },
+  {
+    title: "Redder Than Blood",
+    author: "Tanith Lee",
+    genres:  "mysticism",
+  },
+];
+
+
+console.log(books.filter((book, i, arr) => {
+  return arr.findIndex(bookForIndex => bookForIndex.genres === book.genres) === i
+}));
+
+console.log(new Set(books));
