@@ -112,3 +112,20 @@ function createClubs(clubs) {
 }
 
 console.log(createClubs(clubs));
+
+
+const clubAndPrices = {
+  "Liverpool ": 1500000000,
+  "                                Chelsea": 6.5,
+  " Ajax": 344000000,
+  "   Bayer Leverkusen  ": 34671982,
+}
+
+/**
+ * Потрібно додати в кожен клуб його ціну (totalValue)
+ * @param {Array<Club>} clubs 
+ * @param {Object} prices 
+ */
+function addPrices(clubs, prices) {
+
+}
