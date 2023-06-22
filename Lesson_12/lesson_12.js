@@ -55,29 +55,7 @@ bob.setAge("Banana");
 console.log(bob["#name"]);
 console.log(bob);
 
-class Club {
-  name; // "default CLub"
-  #totalValue = 0; // 0
-  numberOfPlayers = 11;
 
-  constructor(name = "default CLub", totalValue) {
-    this.name = name;
-
-    if (!isNaN(totalValue)) {
-      this.#totalValue = totalValue;
-    }
-  }
-
-  getTotalValue() {
-    return this.#totalValue - 0;
-  }
-
-  setTotalValue(newTotalValue) {
-    if (!isNaN(totalValue)) {
-      this.#totalValue = newTotalValue;
-    }
-  }
-}
 
 const testClub = new Club("club", "banana");
 
@@ -121,6 +99,8 @@ const clubAndPrices = {
   "   Bayer Leverkusen  ": 34671982,
 }
 
+
+
 /**
  * Потрібно додати в кожен клуб його ціну (totalValue)
  * @param {Array<Club>} clubs 
@@ -129,3 +109,42 @@ const clubAndPrices = {
 function addPrices(clubs, prices) {
 
 }
+//! не забудьте викликати ф-ю
+
+const winterRoasterPlayers = [
+  "Maradona",
+  "Benzema",
+  "Tsygankov",
+  "Mudryk",
+  "Zidan",
+  "Messi",
+  "Rebrov",
+  ];
+  
+
+
+
+clubs.reduce((acc, club, i) => {
+  if (exclusions.some((exclusion) => exclusion.name === club)) {
+    return acc;
+  }
+
+  const player = players[i];
+
+
+  if (!acc[club]) {  // acc["Real Madrid"]
+    return {
+      ...acc,
+      [club]: {
+        players: [player],
+      },
+    };
+  }
+  
+  acc[club].players.push(player) // acc["Real Madrid"].players
+
+  return  acc;
+  
+}, {});
+
+
