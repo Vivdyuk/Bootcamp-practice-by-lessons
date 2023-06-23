@@ -84,3 +84,15 @@ function insertGGList(list, parentSelector) {
   //     </li>`
   // );
 }
+
+
+
+function first() {
+  const second = () => {
+    console.log(this);
+  }
+
+  second();
+}
+
+
