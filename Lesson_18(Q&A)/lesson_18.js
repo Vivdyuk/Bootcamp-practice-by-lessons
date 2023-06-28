@@ -56,3 +56,33 @@ createMarkupFromLetter()
 // "javacript".startsWith('j') => true
 // "javacript".startsWith('J') => false
 // "javacript".startsWith('h') => false
+
+
+
+// class Array {
+//   length
+
+//   arr
+
+//   map(callback) {
+//     const arr  = [];
+//     for (let i = 0; i < this.length; i++) {
+//       arr.push(callback(this[i], i, this))
+//     }
+
+//     return arr;
+//   }
+
+//   find(callback) {
+//     const arr  = [];
+//     for (let i = 0; i < this.length; i++) {
+//       if(callback(this[i], i, this)) {
+  // return this[i]
+// }
+//     }
+
+//     return arr;
+//   }
+// }
+
+// Array.prototype.map.call(listElements, () => ))
